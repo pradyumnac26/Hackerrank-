@@ -1,0 +1,9 @@
+def beautifulDays(i, j, k):
+    count=0
+    for l in range(i,j+1):
+        z=str(l)
+        s="".join(reversed(z))
+        if (l-int(s))%k==0:
+            count=count+1
+    return count
+        

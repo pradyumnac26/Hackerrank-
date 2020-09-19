@@ -1,0 +1,10 @@
+int saveThePrisoner(int n, int m, int s) {
+    int sd=(m+s-1)%n;
+if(sd==0)
+return n;
+else 
+return (m+s-1)%n;
+
+
+
+}

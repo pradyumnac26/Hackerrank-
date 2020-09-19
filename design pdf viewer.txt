@@ -1,0 +1,13 @@
+int designerPdfViewer(vector<int> h, string word) {
+int width = word.length();
+    int height = 0;
+    
+    for(int i=0; i < width; i++){
+        if(h[word[i]-'a'] > height){
+            height = h[word[i]-'a'];
+        }
+    }
+    
+    return width * height;
+
+}

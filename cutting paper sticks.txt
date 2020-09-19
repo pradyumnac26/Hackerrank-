@@ -1,0 +1,6 @@
+long solve(long n, long m) 
+{
+    
+return ((n-1)+(n*(m-1)));
+
+}

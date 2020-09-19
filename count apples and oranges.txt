@@ -1,0 +1,4 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    r = range(s,t+1)
+    print(sum([a+x in r for x in apples]))
+    print(sum([b+x in r for x in oranges]))

@@ -1,0 +1,39 @@
+int howManyGames(int p, int d, int m, int s) {
+    // Return the number of games you can buy
+vector<int> a;
+    int i,sum=0,count=0;
+    a.push_back(p);
+    for( i=0;i<10000;i++)
+    {
+        if(p-d>m)
+        {
+            a.push_back(p-d);
+            p=p-d;}
+        else
+            a.push_back(m);
+    }
+    for( i=0;i<a.size();i++)
+    {
+    
+        if(sum<=s)
+        {
+            sum=sum+a[i];
+            count++;
+        }
+    }
+    return count-1;
+}
+
+
+
+
+
+
+///////////in python below
+def howManyGames(p, d, m, s):
+    games = 0
+    while s >= 0:
+        s -= p
+        p = max(p - d, m)
+        games += 1
+    return games - 1
